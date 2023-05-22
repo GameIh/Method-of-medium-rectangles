@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>513</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Метод средних прямоугольников</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="EnterGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>120</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Входные данные</string>
+    </property>
+    <widget class="QGroupBox" name="CoefficientsGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>101</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Коэффициенты</string>
+     </property>
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="CoefficientsGridLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="BLabel">
+         <property name="text">
+          <string>B:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="CLabel">
+         <property name="text">
+          <string>C:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="ALabel">
+         <property name="text">
+          <string>A:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="CLineEdit"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="BLineEdit"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="ALineEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="IntervalGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>101</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Интервал</string>
+     </property>
+     <widget class="QWidget" name="gridLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="IntervalGridLayout"/>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="InputMethodGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>141</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Способ ввода</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>20</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="InputMethodGridLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="KeyboardRadioButton">
+        <property name="text">
+         <string>Клавиатура</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="FileRadioButton">
+        <property name="text">
+         <string>Файл</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="FunctionGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>120</width>
+      <height>96</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Функции</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>102</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="F1RadioButton">
+        <property name="text">
+         <string>a*x^3 + bx + c</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="F2RadioButton">
+        <property name="text">
+         <string>a*sin(x+b) + c</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="F3RadioButton">
+        <property name="text">
+         <string>a*ln|x+b| + c</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="ResultGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Результат</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="FileGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>201</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="FileGridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="FileNameLabel">
+        <property name="text">
+         <string>Название :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="FileNamelineEdit"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="FileInputPushButton">
+        <property name="text">
+         <string>Считать данные</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>513</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
