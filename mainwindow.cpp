@@ -62,15 +62,6 @@ void MainWindow::on_FileInputPushButton_clicked()
         msgBox.exec();
         return;
     }
-    QFile file1("output.txt");
-    if(file1.open(QFile::WriteOnly | QFile::Truncate))
-    {
-        qDebug()<<1;
-        QTextStream out(&file1);  //Create a write stream
-        out << "PI:" << qSetFieldWidth(10) << left << 3.1415926;//data input
-        out << "\r\ninsert new line";//data input
-    }
-    file1.close();
     QFile file(ui->FileNamelineEdit->text());
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox msgBox;
@@ -88,6 +79,32 @@ void MainWindow::on_FileInputPushButton_clicked()
     file.close();
 }
 
+void MainWindow::plot()
+{
+    QVector<double> x(N), y(N); // initialize with entries 0..100
+    double h = (right - left) / N; // Шаг
+    double yMax=f(left);
+    double yMin=yMax;
+    for (int i=0; i<N; ++i)
+    {
+      x[i] = left+i*h; // x goes from -1 to 1
+      y[i] = f(x[i]); // let's plot a quadratic function
+      if (y[i]>yMax)
+          yMax=y[i];
+      if (y[i]<yMin)
+          yMin=y[i];
+    }
+    // create graph and assign data to it:
+    ui->widget->addGraph();
+    ui->widget->graph(0)->setData(x, y);
+    // give the axes some labels:
+    ui->widget->xAxis->setLabel("x");
+    ui->widget->yAxis->setLabel("y");
+    // set axes ranges, so we see all data:
+    ui->widget->xAxis->setRange(left-1, right+1);
+    ui->widget->yAxis->setRange(yMin, yMax);
+    ui->widget->replot();
+}
 
 void MainWindow::on_CalculatePushButton_clicked()
 {
@@ -127,6 +144,7 @@ void MainWindow::on_CalculatePushButton_clicked()
         return;
     }
     double integral=pr_s();
+    plot();
     N*=100;
     double integralTrue=pr_s();
     double AbsEps=qAbs(integral-integralTrue);

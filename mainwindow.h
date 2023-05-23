@@ -37,7 +37,7 @@ private:
     int N;
     double f(double);
     double pr_s();
-
+    void plot();
 
 };
 #endif // MAINWINDOW_H
