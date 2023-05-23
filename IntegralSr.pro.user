@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.1, 2023-05-23T05:17:59. -->
+<!-- Written by QtCreator 4.15.1, 2023-05-23T17:56:03. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -289,8 +289,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/qt/IntegralSr/IntegralSr.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/qt/IntegralSr/IntegralSr.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">IntegralSr2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Projects/Qt/IntegralSr/Method-of-medium-rectangles/IntegralSr.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Projects/Qt/IntegralSr/Method-of-medium-rectangles/IntegralSr.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
